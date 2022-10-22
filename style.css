@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'popins' sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #131313;
+}
+.container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    transform-style: preserve-3d;
+}
+.container .box{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 40px;
+    background-color: #232323;
+    border-radius: 25px;
+    transform-style: preserve-3d;
+}
+.container .box::before
+{
+    content: 'NIKE';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 6em;
+    font-weight: 900;
+    font-style: italic;
+    opacity: 0;
+} 
+.container .box::after
+{
+    content: 'shode';
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 5em;
+    font-weight: 900;
+    font-style: italic;
+    opacity: 0;
+    transition: 0,5;
+} 
+.container .box::before,
+.container .box::after
+{
+    opacity: 0,4;
+}
